@@ -153,27 +153,27 @@ export default {
   height: calc(100% - 72px);
   overflow: auto;
   .banner{
-    background: url("~@/assets/images/banner.jpg") no-repeat;
+    background: url("~@/assets/images/banner.png") no-repeat;
     height: 600px;
     width: 100%;
     background-size:cover;
     .c_banner{
       padding: 80px 24px 88px;
       width: 41%;
-      margin-left: 20%;
+      margin-left: 15%;
       .title_1{
         margin-bottom: 12px;
-        color: #ffffff;
+        color:#2e1917;
       }
       .title_2{
         font-size: 1.25rem;
-        color: #E7E9E9;
+        color: #2e1917;
         margin-bottom: 40px;
         font-weight: 500;
       }
       .title_3{
         font-size: 1rem;
-        color:  #E7E9E9;
+        color: #2e1917;
         margin-bottom: 30px;
         font-weight: 500;
       }
@@ -234,7 +234,7 @@ export default {
     }
   }
   .recent_reviews{
-    background-color: #F9F8F6;
+    background-color:rgba(210,210,210,0.3);
     width: 100%;
     .r_r_title{
       text-align: center;
@@ -302,14 +302,14 @@ export default {
     }
   }
   .be_heard{
-    background-color:#444D5C;
+    background-color:#4f5051;
     padding: 88px 24px 80px;
     .heard_title{
       text-align: center;
       font-size: 2.875rem;
       margin-top: 0;
       margin-bottom: 16px;
-      color: #C7C6C9;
+      color: #ffffff;
     }
     .heard_text{
       text-align: center;
@@ -319,23 +319,23 @@ export default {
       font-size: 1.25rem;
       line-height: 1.75rem;
       max-width: 750px;
-      color: #C7C6C9;
+      color:   #ffffff;
     }
     .what_do{
       text-align: center;
       .companies{
-        border: 2px solid  #000032;
+        border: 2px solid  #ffffff;
         font-weight: bold;    
       }
       .el-button--gone:hover
       {
-        background:#C7C6C9;
-        color: #ffffff;
-        border-color: #C7C6C9;
+        background:#ffffff;
+        color: #4f5051;
+        border-color: #4f5051;
       }
       .el-button--gone{
-        background:#444D5C;
-        color: #000032;
+        background:#4f5051;
+        color: #ffffff;
       }
     }
   }
@@ -345,7 +345,7 @@ export default {
       height: calc(100% - 72px);
       overflow: auto;
       .banner{
-        background: url("~@/assets/images/banner.jpg") no-repeat;
+        background: url("~@/assets/images/banner.png") no-repeat;
         height: auto;
         .c_banner{
           padding: 1rem;

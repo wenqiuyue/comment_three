@@ -124,7 +124,7 @@ export default {
     font-weight: bold;
     height: 72px;
     padding:0 20px;
-    color: #333333;
+    color: #ffffff;
     max-width: 1206px;
     margin: 0 auto;
     .logo{
@@ -150,19 +150,19 @@ export default {
       }
       .companies{
         margin-left: 2rem;
-        border: 2px solid #333333;
+        border: 2px solid #ffffff;
         font-weight: bold;
         display: initial;    
       }
       .el-button--gone:hover
       {
-        background: #333333;
-        border-color: #333333;
+        background:  #ffffff;
+        border-color: #ffffff;
         color: @main-color;
       }
       .el-button--gone{
         background: @main-color;
-        color:#333333;
+        color: #ffffff;
       }
     }
   }

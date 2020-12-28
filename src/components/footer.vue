@@ -22,7 +22,7 @@ export default {
 @import '../assets/style/style.less';
 .footer{
     background:@main-color;
-    color: #333333;
+    color: #ffffff;
     padding: 1px 0 28px 0;
     .b_share{
       text-align: center;
@@ -32,7 +32,7 @@ export default {
       text-align: center;
       a{
         margin-left: 3px;
-        color: #333333;
+        color: #ffffff;
         border-bottom: 1px dotted #ddd;
         text-decoration:none
       }
