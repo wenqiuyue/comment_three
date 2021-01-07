@@ -10,7 +10,7 @@
     </div>
     <div class="c_c_categories">
       <el-row :gutter="20">
-        <el-col :span="8" :xs="0">
+        <el-col :span="0" :xs="0">
           <div class="left_categories">
             <h3>View Category</h3>
             <ul>
@@ -18,11 +18,11 @@
             </ul>
           </div>
         </el-col>
-        <el-col :span="16" :xs="24">
+        <el-col :span="24" :xs="24">
           <div class="right_categories">
             <el-row :gutter="20" v-for="(item,index) in typeList" :key="index" class="right_row" :id="index">
-              <el-col :span="8"><div class="r_left_categories"><span>{{item.Name}}</span></div></el-col>
-              <el-col :span="16">
+              <el-col :span="24">
+                <div class="r_left_categories"><span>{{item.Name}}</span></div>
                 <div class="r_right_categories">
                   <span v-for="(citem,cindex) in item.info" :key="cindex" @click="handleProductList(citem,item.Name)">{{citem.Name}}</span>
                 </div>
@@ -145,6 +145,8 @@ export default {
         .r_left_categories{
           font-size: 1.17rem;
           color: #1b1b21;
+          font-weight: bold;
+          margin-bottom: 12px;
         }
         .r_right_categories{
           padding-bottom: 15px;
@@ -153,7 +155,7 @@ export default {
           flex-flow: row wrap;
           line-height: 1.5rem;
           span{
-            flex-basis: 50%;
+            flex-basis: 23%;
             margin-bottom: 8px;
             overflow-wrap: break-word;
             word-wrap: break-word;
