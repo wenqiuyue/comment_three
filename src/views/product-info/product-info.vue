@@ -300,7 +300,7 @@ export default {
      * 相关产品
      */
     handleTypeProductCommand(com){
-      window.open("http://120.25.67.116:8028/product-info?pid="+com);
+      window.open("http://120.25.67.116:8031/product-info?pid="+com);
     },
     /**
      * 评论分数进入写评论
@@ -318,7 +318,7 @@ export default {
      * 跳转产品页
      */
     handleHomePage(url){
-      window.open("http://120.25.67.116:8028/check-page?url="+this.processDetails.Url);
+      window.open("http://120.25.67.116:8031/check-page?url="+this.processDetails.Url);
     },
     /**
      * 产品详情数据初始化
