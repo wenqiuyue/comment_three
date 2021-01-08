@@ -10,8 +10,36 @@
         </div>
       </div>
       <div class="p_product-list_container">
-        <div v-if="proList&&proList.length>0">
-          <div class="list_card" v-for="(item,index) in proList" :key="index" @click="handleProductInfo(item.Id)">
+        <div v-if="proList&&proList.length>0" class="list_card">
+              <el-card v-for="(item,index) in proList" :key="item.Id" @click.native="handleProductInfo(item.Id)" shadow="hover">
+                <el-image
+                  :src="item.Cover"
+                  fit="contain"
+                  >
+                  <div slot="error" class="error_img_tips">
+                      Failed to load 
+                  </div>
+                </el-image>
+                <div class="list_card_right">
+                  <div>
+                    <span class="l_c_r_title">{{item.Name}}</span>
+                  </div>
+                  <div class="l_c_r_score">
+                    <rate
+                      class="c_t_rate"
+                      :value="item.Rank"
+                      :isDisabled="true"
+                    >
+                    </rate>
+                    <span class="score_num">{{item.CommentCount}} reviews</span>
+                    <el-tag type="primary" size="small" v-if="item.Price">${{item.Price}} one time fee</el-tag>
+                    <el-tag type="success" size="small" v-if="item.Discount">{{item.Discount}}</el-tag>
+                  </div>
+                  <p class="l_c_r_describ">{{item.Description?item.Description.replace(/&lt;.+?&gt;/g, ''):'No introduction'}}</p>
+                </div>
+              </el-card>
+              <el-card v-for="(e,ind) in 5" :key="e" class="empty_card"></el-card>
+          <!-- <div class="list_card" v-for="(item,index) in proList" :key="index" @click="handleProductInfo(item.Id)">
             <el-image
               :src="item.Cover"
               fit="contain"
@@ -37,7 +65,7 @@
               </div>
               <p class="l_c_r_describ">{{item.Description?item.Description.replace(/&lt;.+?&gt;/g, ''):'No introduction'}}</p>
             </div>
-          </div>
+          </div> -->
         </div>
         <empty v-else :tips="'No data available'"></empty>
       </div>
@@ -200,36 +228,37 @@ export default {
       }
       .p_product-list_container{
         min-height: calc(100% - 310px);
-        max-width: 1056px;
-        margin: 0 auto;
-        padding: 15px 0 25px 0;
+        padding: 35px 0px 25px 0px;
         .list_card{
-          background: @car-bg;
-          box-shadow: 0 12px 20px 0 rgba(0, 0, 50, 0.12);
-          margin-bottom: 12px;
-          padding: 24px 10px 24px 40px;
           display: flex;
           flex-direction: row;
-          .el-image{
-            width: 100px;
-            height: 65px;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          .el-card{
+            width: 305px;
+            margin-bottom: 15px;
+            margin-right: 20px;
+            cursor: pointer;
+            /deep/.el-card__body{
+              padding: 0;
+              .el-image{
+                width: 100%;
+                height: 230px;
+              }
+            }
           }
-          /deep/.error_img_tips{
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: #c0c4cc;
-            vertical-align: middle;
-            background: #f5f7fa;
+          .empty_card{
+            background: #f2f2f5;
+            box-shadow:none;
+            cursor: default;
+            border: none;
           }
         }
         .list_card_right{
-          width: calc(100% - 132px);
-          padding-left: 32px;
+          padding: 10px;
           display: flex;
           flex-direction: column;
+          border-top: 1px solid #ebeef5;
           cursor: pointer;
           .l_c_r_title{
             font-size: 1.125rem;
@@ -292,12 +321,16 @@ export default {
         }
         .p_product-list_container{
           min-height: calc(100% - 158px);
-          max-width: 97%;
+          // max-width: 97%;
           padding: 0.5rem 0;
           .list_card{
             box-shadow: 0 2px 3px 0 rgba(0, 0, 50, 0.12);
             margin-bottom: 0.5rem;
             padding: 0.6rem 0.3rem 0.4rem 0.5rem;
+            .el-card{
+              width: 100%;
+              margin-right: 0px;
+            }
             .el-image{
               width: 80px;
               height: 80px;
