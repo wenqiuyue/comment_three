@@ -540,6 +540,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+@import '../../assets/style/style.less';
 .share_title{
   color: #333333;
   font-weight: bold;
@@ -660,7 +661,6 @@ export default {
             color: #32323d;
             margin: 0;
             margin-left: 5px;
-            user-select: none;
           }
         }
         .introduce_container{
@@ -670,7 +670,6 @@ export default {
           color: #515174;
           line-height: 1.5rem;
           word-break: break-all;
-          user-select: none;
         }
         .c_ellipsis{
           display: -webkit-box;
@@ -774,7 +773,6 @@ export default {
           .date{
             color: #73738f;
             font-size: 0.875rem;
-            user-select: none;
           }
         }
         .card_text{
@@ -783,7 +781,6 @@ export default {
           border-bottom: 1px solid #e8e8eb;
           line-height: 1.5rem;
           color: #32323d;
-          user-select: none;
           margin-bottom: 10px;
         }
         .card_bottom{
@@ -869,12 +866,15 @@ export default {
       .right_scam{
         margin-top: 12px;
         background: #ffffff;
+        border: 1px solid #eaeef4;
+        border-radius: 8px;
         h3{
           margin: 0;
           padding: 12px 15px;
           border-bottom: 1px solid #e8e8eb;
           font-size: 1rem;
           font-weight: 500;
+          border-left: 6px solid @main-color;
         }
         .scam_tips{
           font-size: 12px;
@@ -974,12 +974,15 @@ export default {
       .right_img{
         margin-top: 12px;
         background: #ffffff;
+        border: 1px solid #eaeef4;
+        border-radius: 8px;
         h3{
           margin: 0;
           padding: 12px 15px;
           border-bottom: 1px solid #e8e8eb;
           font-size: 1rem;
           font-weight: 500;
+          border-left: 6px solid @main-color;
         }
         .r_r_img{
           padding-top: 5px;
@@ -991,12 +994,15 @@ export default {
       .right_Informations{
         margin-top: 12px;
         background: #ffffff;
+        border: 1px solid #eaeef4;
+        border-radius: 8px;
         h3{
           margin: 0;
           padding: 12px 15px;
           border-bottom: 1px solid #e8e8eb;
           font-size: 1rem;
           font-weight: 500;
+          border-left: 6px solid @main-color;
         }
         .r_r_Informations{
           padding: 8px 15px 0 15px;
@@ -1037,12 +1043,15 @@ export default {
       .right_discount{
         margin-bottom: 12px;
         background: #ffffff;
+        border: 1px solid #eaeef4;
+        border-radius: 8px;
         h3{
           margin: 0;
           padding: 12px 15px;
           border-bottom: 1px solid #e8e8eb;
           font-size: 1rem;
           font-weight: 500;
+          border-left: 6px solid @main-color;
         }
         .r_d_main{
           display: flex;
@@ -1091,6 +1100,8 @@ export default {
       .right_comparison{
         margin-top: 2px;
         background: #ffffff;
+        border: 1px solid #eaeef4;
+        border-radius: 8px;
         .comparison_list_button{
           padding: 0 24px 12px 24px;
           .comparison_button{
