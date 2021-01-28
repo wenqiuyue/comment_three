@@ -247,6 +247,16 @@ export default {
               }
             }
           }
+          /deep/.error_img_tips{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #a8adb8;
+            vertical-align: middle;
+            background: #f5f7fa;
+          }
           .empty_card{
             background: #f2f2f5;
             box-shadow:none;
