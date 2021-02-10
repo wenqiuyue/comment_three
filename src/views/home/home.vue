@@ -4,8 +4,8 @@
   <div class="h_home">
     <div class="banner">
       <div class="c_banner">
-        <h1 class="title_1">Listen to the most authentic voice of users</h1>
-        <h2 class="title_2">Read reviews. Write reviews. Find businesses.</h2>
+        <h1 class="title_1">Aggregate massive user reviews to help hear the most authentic voice.</h1>
+        <h2 class="title_2">All reviews comes from the public and serves the public.</h2>
         <div class="b_search">
           <el-input class="s_input" v-model="searchData" placeholder="Search for a company or category…"></el-input>
           <el-button class="s_button" type="primary" icon="el-icon-search" @click="handleSearch">Search</el-button>
@@ -47,6 +47,7 @@
                 </rate>
               </div>
               <p class="c_user">{{review.Name}} <span class="rev">reviewed</span> <span :data-pro="JSON.stringify(review)" :id="review.ComentId"  class="pro">{{review.ProName}}</span></p>
+              <p class="c_text_title">{{review.Title}}</p>
               <p class="c_text">
                 {{review.Content}}
               </p>
@@ -75,6 +76,7 @@
                 </rate>
               </div>
               <p class="c_user">{{review.Name}} <span class="rev">reviewed</span> <span @click="handleProInfo(review)" class="pro">{{review.ProName}}</span></p>
+              <p class="c_text_title">{{review.Title}}</p>
               <p class="c_text">
                 {{review.Content}}
               </p>
@@ -385,6 +387,15 @@ export default {
             .pro{
               cursor: pointer;
             }
+          }
+          .c_text_title{
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            margin-bottom: 5px;
+            font-weight: bold;
           }
           .c_text{
             font-size: 0.875rem;
